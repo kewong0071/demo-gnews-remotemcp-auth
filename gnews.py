@@ -20,6 +20,7 @@ mcp = FastMCP(
         "Requires a valid GNEWS_API_KEY environment variable."
     ),
     json_response=True,
+    host_header_validation=False
 )
 
 
