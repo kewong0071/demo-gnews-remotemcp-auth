@@ -19,7 +19,9 @@ app = FastAPI(lifespan=lifespan)
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify your actual origins
+    allow_origins=[
+        "https://demo-gnews-remotemcp-auth-fd63.onrender.com",
+        "*"],  # In production, specify your actual origins
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
