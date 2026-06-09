@@ -19,10 +19,9 @@ mcp = FastMCP(
         "Expose the GNews Search and Top Headlines API to MCP clients. "
         "Requires a valid GNEWS_API_KEY environment variable."
     ),
-    json_response=True,
-    host_header_validation=False
+    json_response=True
 )
-
+mcp.settings.allowed_hosts = ["demo-gnews-remotemcp-auth-fd63.onrender.com","*"]
 
 class GNewsSource(BaseModel):
     name: str | None = None
